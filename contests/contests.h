@@ -13,3 +13,21 @@ namespace contest3 {
     int task(char index);
 }
 #endif
+
+#ifndef MIPT2021_2SEM_CONTEST4_H
+namespace contest4 {
+    int task(char index);
+}
+#endif
+
+#ifndef MIPT2021_2SEM_CONTEST5_H
+namespace contest5 {
+    int task(char index);
+}
+#endif
+
+#ifndef MIPT2021_2SEM_CONTEST6_H
+namespace contest6 {
+    int task(char index);
+}
+#endif
