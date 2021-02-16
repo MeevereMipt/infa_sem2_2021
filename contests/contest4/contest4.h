@@ -2,10 +2,10 @@
 // Created by EGor on 16.02.2021.
 //
 
-#ifndef MIPT2021_2SEM_CONTEST2_H
-#define MIPT2021_2SEM_CONTEST2_H
+#ifndef MIPT2021_2SEM_CONTEST4_H
+#define MIPT2021_2SEM_CONTEST4_H
 
-namespace contest2 {
+namespace contest4 {
     int taskA();
     int taskB();
     int taskC();
@@ -18,4 +18,4 @@ namespace contest2 {
     int task(char index);
 }
 
-#endif //MIPT2021_2SEM_CONTEST2_H
+#endif //MIPT2021_2SEM_CONTEST4_H
