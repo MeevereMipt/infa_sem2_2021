@@ -3,13 +3,16 @@
 
 #include <iostream>
 
+#include "contests/contests.h"
+
 //typedef int my_int;
 //typedef void (*p_func)();
 
 int main() {
 //    factorial_main();
     int n;
+    contest5::task('A');
     std::cin >> n;
     fibbonaci_main(n);
-    return 0;
+    return 0
 }

@@ -15,7 +15,19 @@ namespace contest5 {
     int taskG();
     int taskH();
 
-    int task(char index);
+    int task(char index){
+        switch(index) {
+            case 'A': return taskA();
+            case 'B': return taskB();
+            case 'C': return taskC();
+            case 'D': return taskD();
+            case 'E': return taskE();
+            case 'F': return taskF();
+            case 'G': return taskG();
+            case 'H': return taskH();
+            default: return 1;
+        }
+    }
 }
 
 #endif //MIPT2021_2SEM_CONTEST5_H
