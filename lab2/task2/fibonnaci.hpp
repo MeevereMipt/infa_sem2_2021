@@ -23,9 +23,9 @@ int fibb_rec( int n ){
     return fibb_rec(n-1) + fibb_rec(n-2);
 }
 
-int fibb_rec_opt( int n ){
-
-}
+//int fibb_rec_opt( int n ){
+//
+//}
 
 int fibbonaci_main( int arg ) {
     std::cout << fibb_non_rec(arg);

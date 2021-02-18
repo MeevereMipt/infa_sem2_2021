@@ -5,11 +5,6 @@
 #include <iostream>
 
 namespace contest3 {
-    int taskA(){
-
-
-        return 0;
-    }
 
     int stupid_taskA(){
         unsigned int array[255];
@@ -25,9 +20,15 @@ namespace contest3 {
 
         for( int i=0; i<N; i++ ){
             if( N*array[i] > sum )
-                out_sum += array[i]
+                out_sum += array[i];
         }
+        std::cout << out_sum;
 
+        return 0;
+    }
+
+    int taskA(){
+        stupid_taskA();
         return 0;
     }
 }
