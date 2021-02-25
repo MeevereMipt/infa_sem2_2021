@@ -14,17 +14,21 @@ namespace contest2 {
     int taskF();
     int taskG();
     int taskH();
+    int taskI();
+    int taskJ();
 
     int task(char index){
         switch(index) {
-//            case 'A': return taskA();
-//            case 'B': return taskB();
-//            case 'C': return taskC();
-//            case 'D': return taskD();
-//            case 'E': return taskE();
-//            case 'F': return taskF();
+            case 'A': return taskA();
+            case 'B': return taskB();
+            case 'C': return taskC();
+            case 'D': return taskD();
+            case 'E': return taskE();
+            case 'F': return taskF();
 //            case 'G': return taskG();
 //            case 'H': return taskH();
+//            case 'I': return taskI();
+//            case 'J': return taskJ();
             default: return 1;
         }
     }
