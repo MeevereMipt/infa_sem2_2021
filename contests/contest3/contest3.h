@@ -18,7 +18,7 @@ namespace contest3 {
     int task(char index){
         switch(index) {
             case 'A': return taskA();
-//            case 'B': return taskB();
+            case 'B': return taskB();
 //            case 'C': return taskC();
 //            case 'D': return taskD();
 //            case 'E': return taskE();

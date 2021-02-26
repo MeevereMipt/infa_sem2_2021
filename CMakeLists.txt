@@ -20,5 +20,5 @@ add_executable(
         main.cpp
         lab2/task1/factorial.hpp
         lab2/task2/fibonnaci.hpp
-        contests/contest2/taskC.cpp contests/contest2/taskD.cpp contests/contest2/taskE.cpp contests/contest2/taskF.cpp contests/contest2/taskG.cpp)
+        contests/contest2/taskC.cpp contests/contest2/taskD.cpp contests/contest2/taskE.cpp contests/contest2/taskF.cpp contests/contest2/taskG.cpp contests/contest2/taskJ.cpp)
 

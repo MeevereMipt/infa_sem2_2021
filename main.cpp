@@ -29,6 +29,9 @@ int main() {
     while(true) {
         std::cin >> contest_num >> task_index;
 
+        if(contest_num == -1)
+            goto LOOP_EXIT;
+
         switch (contest_task(contest_num, task_index)) {
             case WRONG_CONTEST_NUMBER:
                 std::cout << "Wrong contest number, try again\n";
