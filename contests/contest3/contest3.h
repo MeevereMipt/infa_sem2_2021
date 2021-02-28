@@ -19,10 +19,10 @@ namespace contest3 {
         switch(index) {
             case 'A': return taskA();
             case 'B': return taskB();
-//            case 'C': return taskC();
-//            case 'D': return taskD();
-//            case 'E': return taskE();
-//            case 'F': return taskF();
+            case 'C': return taskC();
+            case 'D': return taskD();
+            case 'E': return taskE();
+            case 'F': return taskF();
 //            case 'G': return taskG();
 //            case 'H': return taskH();
             default: return 1;

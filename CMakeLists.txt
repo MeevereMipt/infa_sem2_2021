@@ -8,6 +8,12 @@ add_executable(
             contests/contest2/contest2.h
                 contests/contest2/taskA.cpp
                 contests/contest2/taskB.cpp
+                contests/contest2/taskC.cpp
+                contests/contest2/taskD.cpp
+                contests/contest2/taskE.cpp
+                contests/contest2/taskF.cpp
+                contests/contest2/taskG.cpp
+                contests/contest2/taskJ.cpp
             contests/contest3/contest3.h
                 contests/contest3/taskA.cpp
                 contests/contest3/taskB.cpp
@@ -20,5 +26,5 @@ add_executable(
         main.cpp
         lab2/task1/factorial.hpp
         lab2/task2/fibonnaci.hpp
-        contests/contest2/taskC.cpp contests/contest2/taskD.cpp contests/contest2/taskE.cpp contests/contest2/taskF.cpp contests/contest2/taskG.cpp contests/contest2/taskJ.cpp)
+          contests/contest3/taskC.cpp contests/contest3/taskD.cpp contests/contest3/taskE.cpp contests/contest3/taskF.cpp)
 

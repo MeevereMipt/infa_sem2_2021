@@ -80,7 +80,7 @@ namespace contest3 {
         int x, y;
         for(int i=0;i<K;i++){
             std::cin >> x >> y;
-            map.add_mine(x,y);
+            map.add_mine(x-1,y-1);
         }
 
         map.print();
