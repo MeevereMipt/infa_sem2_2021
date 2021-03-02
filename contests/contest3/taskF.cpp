@@ -22,22 +22,22 @@ namespace contest3 {
 
     int taskF() {
         unsigned int n, i;
-        cin >> n;
+        std::cin >> n;
         int *a = my_slightly_dumb_reallocation(nullptr, 0, n / 2);
 
         for (i = 0; i < n / 2; i++)
-            cin >> a[i];
+            std::cin >> a[i];
 
         a = my_slightly_dumb_reallocation(a, n / 2, n);
 
         for (; i < n; i++)
-            cin >> a[i];
+            std::cin >> a[i];
 
         int sum = 0;
         for (i = 0; i < n; i++)
             sum += a[i];
 
-        cout << sum << endl;
+        std::cout << sum << std::endl;
         a = my_slightly_dumb_reallocation(a, n, n / 2);
         a = my_slightly_dumb_reallocation(a, n / 2, 0);
         a = my_slightly_dumb_reallocation(a, 0, 0);
