@@ -2,9 +2,17 @@ cmake_minimum_required(VERSION 3.15)
 project(mipt2021-2sem)
 
 set(CMAKE_CXX_STANDARD 17)
+set(APP_USABLES usables/)
+
+include_directories(${APP_USABLES})
+
+set(SOURCE_FILES
+        usables/my_stack.h
+        contests/contest5/taskC.cpp)
 
 add_executable(
         mipt2021-2sem
+
             contests/contest2/contest2.h
                 contests/contest2/taskA.cpp
                 contests/contest2/taskB.cpp
@@ -32,5 +40,6 @@ add_executable(
         main.cpp
         lab2/task1/factorial.hpp
         lab2/task2/fibonnaci.hpp
-)
 
+        ${SOURCE_FILES}
+)
