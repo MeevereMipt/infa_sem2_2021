@@ -8,7 +8,8 @@ include_directories(${APP_USABLES})
 
 set(SOURCE_FILES
         usables/my_stack.h
-        contests/contest5/taskC.cpp)
+        usables/my_queue.h
+        )
 
 add_executable(
         mipt2021-2sem
@@ -33,6 +34,7 @@ add_executable(
             contests/contest5/contest5.h
                 contests/contest5/taskA.cpp
                 contests/contest5/taskB.cpp
+                contests/contest5/taskC.cpp
             contests/contest6/contest6.h
 
         contests/contests.h

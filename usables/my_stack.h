@@ -5,14 +5,14 @@
 #ifndef MIPT2021_2SEM_MY_STACK_H
 #define MIPT2021_2SEM_MY_STACK_H
 
-struct Node {
-    explicit Node(int x){
+struct StackNode {
+    explicit StackNode(int x){
         data = x;
         next = nullptr;
     }
 
     int data;
-    struct Node* next;
+    StackNode* next;
 };
 
 class Stack {
@@ -31,7 +31,7 @@ public:
     }
 
     void push(int n){
-        Node* elem = new Node(n);
+        StackNode* elem = new StackNode(n);
         elem->next = top;
         top = elem;
         length++;
@@ -42,7 +42,7 @@ public:
             throw std::underflow_error("pop with nullptr");
 
         int out;
-        Node* prev_top = top;
+        StackNode* prev_top = top;
 
         out = top->data;
         top = top->next;
@@ -57,7 +57,7 @@ public:
     }
 
 protected:
-    Node* top;
+    StackNode* top;
 };
 
 #endif //MIPT2021_2SEM_MY_STACK_H
