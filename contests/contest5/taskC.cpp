@@ -6,7 +6,8 @@
 
 namespace contest5{
 
-    int task
+    int taskC() {
 
-
+        return 0;
+    }
 }

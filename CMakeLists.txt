@@ -33,12 +33,12 @@ set(CONTEST_FILES
             contests/contest6_2020/taskB.cpp
 
         contests/contests.h
-        )
+        contests/contest6_2020/taskC.cpp)
 
 set(SOURCE_FILES
         usables/my_stack.h
         usables/my_queue.h
-        )
+        usables/my_array.h)
 
 add_executable(
         mipt2021-2sem
