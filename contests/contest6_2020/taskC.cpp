@@ -6,18 +6,27 @@
 
 namespace contest6{
 
-    void smooth(Array<int>* &arr){
-        Array<int> temp(arr->get_size());
-        for( int i=0; i<temp.get_size(); i++ ){
-            temp[i] = ((*arr)[i-1] + (*arr)[i] + (*arr)[i+1])/3;
+    Array<int>& smooth(const Array<int> &arr){
+        auto temp = new Array<int>(arr.get_size());
+
+        int size = arr.get_size();
+        for( int i=0; i<size; i++ ){
+            (*temp)[i] = (arr[i-1] + arr[i] + arr[i+1])/3;
         }
-        delete arr;
-        arr = &temp;
+
+        return *temp;
     }
 
 
     int taskC(){
-        Array<int> test(2);
+
+        int n;
+        std::cin >> n;
+        Array<int> test(n);
+
+        std::cin >> test;
+        test = smooth(test);
+        std::cout << test;
 
         return 0;
     }
