@@ -20,7 +20,7 @@ namespace contest6 {
             case 'A': return taskA();
             case 'B': return taskB();
             case 'C': return taskC();
-//            case 'D': return taskD();
+            case 'D': return taskD();
 //            case 'E': return taskE();
 //            case 'F': return taskF();
 //            case 'G': return taskG();
