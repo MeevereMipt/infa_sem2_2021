@@ -11,6 +11,8 @@
 using std::ostream;
 using std::istream;
 
+void swap( int& a, int& b );
+
 template <typename T>
 
 class Array {
