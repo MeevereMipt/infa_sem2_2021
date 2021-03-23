@@ -7,12 +7,7 @@
 
 namespace contest6 {
 
-    void swap( int& a, int& b ){
-        int tmp;
-        tmp = a;
-        a = b;
-        b = tmp;
-    }
+
 
     void updated_bubble_sort(Array<int>& arr){
         bool was_swapped = false;
@@ -29,15 +24,15 @@ namespace contest6 {
     }
 
 
-    int taskD() {
+    int taskE() {
 
-        int n;
-        std::cin >> n;
-        Array<int> arr(n);
-
-        std::cin >> arr;
-        bubble_sort(arr);
-        std::cout << arr;
+//        int n;
+//        std::cin >> n;
+//        Array<int> arr(n);
+//
+//        std::cin >> arr;
+//        bubble_sort(arr);
+//        std::cout << arr;
 
         return 0;
     }
