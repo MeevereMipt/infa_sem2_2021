@@ -9,20 +9,6 @@
 //typedef int my_int;
 //typedef void (*p_func)();
 
-#define WRONG_CONTEST_NUMBER 2
-
-int contest_task( int num, char index ){
-    switch (num) {
-        case 2: return contest2::task(index);
-        case 3: return contest3::task(index);
-        case 4: return contest4::task(index);
-        case 5: return contest5::task(index);
-        case 6: return contest6::task(index);
-        case 7: return contest7::task(index);
-        default: return WRONG_CONTEST_NUMBER;
-    }
-}
-
 int main() {
     int contest_num; char task_index;
 
