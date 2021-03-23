@@ -18,6 +18,7 @@ int contest_task( int num, char index ){
         case 4: return contest4::task(index);
         case 5: return contest5::task(index);
         case 6: return contest6::task(index);
+        case 7: return contest7::task(index);
         default: return WRONG_CONTEST_NUMBER;
     }
 }
