@@ -7,3 +7,4 @@
 #include "contest4/contest4.h"
 #include "contest5/contest5.h"
 #include "contest6_2020/contest6.h"
+#include "contest7/contest7.h"

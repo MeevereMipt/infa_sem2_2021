@@ -31,14 +31,26 @@ set(CONTEST_FILES
         contests/contest6_2020/contest6.h
             contests/contest6_2020/taskA.cpp
             contests/contest6_2020/taskB.cpp
+            contests/contest6_2020/taskC.cpp
+            contests/contest6_2020/taskD.cpp
+            contests/contest6_2020/taskE.cpp
+        contests/contest7/contest7.h
+            contests/contest7/taskA.cpp
+            contests/contest7/taskB.cpp
+            contests/contest7/taskC.cpp
+            contests/contest7/taskD.cpp
+            contests/contest7/taskE.cpp
+            contests/contest7/taskF.cpp
+            contests/contest7/taskG.cpp
+            contests/contest7/taskH.cpp
 
         contests/contests.h
-        contests/contest6_2020/taskC.cpp contests/contest6_2020/taskD.cpp contests/contest6_2020/taskE.cpp)
+        )
 
 set(SOURCE_FILES
         usables/my_stack.h
         usables/my_queue.h
-        usables/my_array.h)
+        usables/my_array.h usables/my_array.cpp)
 
 add_executable(
         mipt2021-2sem
