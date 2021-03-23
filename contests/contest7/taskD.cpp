@@ -14,17 +14,17 @@ namespace contest7{
         std::string name;
         bool type;
 
-        std::istream & operator >> (std::istream &in,  Entry& ent);
-        std::ostream & operator << (std::ostream &out, const Entry& ent);
+        friend std::istream & operator >> (std::istream &in,  Entry& ent);
+        friend std::ostream & operator << (std::ostream &out, const Entry& ent);
     };
 
-    std::istream &Entry::operator>>(std::istream &in, Entry &ent) {
-        in >> name >> type;
+    std::istream &operator>>(std::istream &in, Entry &ent) {
+        in >> ent.name >> ent.type;
         return in;
     }
 
-    std::ostream &Entry::operator<<(std::ostream &out, const Entry &ent) {
-        out << name << ' ' << int(type);
+    std::ostream &operator<<(std::ostream &out, const Entry &ent) {
+        out << ent.name << ' ' << int(ent.type);
         return out;
     }
 
