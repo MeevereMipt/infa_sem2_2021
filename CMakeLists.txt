@@ -50,7 +50,7 @@ set(CONTEST_FILES
 set(SOURCE_FILES
         usables/my_stack.h
         usables/my_queue.h
-        usables/my_array.h usables/my_array.cpp)
+        usables/my_array.h usables/my_array.cpp usables/my_queue.cpp)
 
 add_executable(
         mipt2021-2sem

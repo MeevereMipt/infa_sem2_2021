@@ -54,6 +54,7 @@ public:
     }
 
     // wtf why clion said to make it [[nodiscard]]
+    // works nevertheless
     [[nodiscard]] int get_size() const {
         return _size;
     }
