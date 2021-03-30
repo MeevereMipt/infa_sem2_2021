@@ -43,6 +43,16 @@ set(CONTEST_FILES
             contests/contest7/taskF.cpp
             contests/contest7/taskG.cpp
             contests/contest7/taskH.cpp
+        contests/control_test/control_test.h
+            contests/control_test/task1.cpp
+            contests/control_test/task2.cpp
+            contests/control_test/task3.cpp
+            contests/control_test/task4.cpp
+            contests/control_test/task5.cpp
+            contests/control_test/task6.cpp
+            contests/control_test/task8.cpp
+            contests/control_test/task7.cpp
+            contests/control_test/task9.cpp
 
         contests/contests.h
         )
@@ -50,7 +60,9 @@ set(CONTEST_FILES
 set(SOURCE_FILES
         usables/my_stack.h
         usables/my_queue.h
-        usables/my_array.h usables/my_array.cpp usables/my_queue.cpp)
+        usables/my_array.h
+        usables/my_array.cpp
+        usables/my_queue.cpp)
 
 add_executable(
         mipt2021-2sem

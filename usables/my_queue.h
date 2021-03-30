@@ -5,6 +5,8 @@
 #ifndef MIPT2021_2SEM_MY_QUEUE_H
 #define MIPT2021_2SEM_MY_QUEUE_H
 
+#include <iostream>
+
 template <typename T> struct QueueNode {
     T data;
     QueueNode* next;
@@ -33,12 +35,11 @@ template <typename T> class Queue {
 protected:
     QueueNode<T>* top;
     QueueNode<T>* bottom;
-    QueueNode<T>* middle;
 public:
     int length;
 
     Queue(){
-        this->top = this->bottom = this->middle = nullptr;
+        this->top = this->bottom = nullptr;
         length = 0;
     }
 
@@ -48,10 +49,6 @@ public:
 
         if( length == 0 ) {
             bottom = elem;
-            middle = elem;
-        } else {
-            if ( length % 2 == 0 )
-                this->middle = this->middle->next;
         }
 
         top = elem;
@@ -63,10 +60,6 @@ public:
 
         if( length == 0 ) {
             top = elem;
-            middle = elem;
-        } else {
-            if ( (length % 2) == 0 )
-                this->middle = this->middle->prev;
         }
 
         bottom = elem;
@@ -81,10 +74,6 @@ public:
         T data = prev_top->data;
         this->top = prev_top->prev;
 
-        // moving the middle
-        if( length % 2 == 1 )
-            this->middle = this->middle->prev;
-
         delete prev_top;
         length--;
         return data;
@@ -98,18 +87,10 @@ public:
         T data = prev_bottom->data;
         this->bottom = prev_bottom->prev;
 
-        // moving the middle
-        if( length % 2 == 1 )
-            this->middle = this->middle->next;
-
         delete prev_bottom;
         length--;
         return data;
     }
-
-
-
-
 
 };
 
