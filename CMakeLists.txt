@@ -55,7 +55,7 @@ set(CONTEST_FILES
             contests/control_test/task9.cpp
 
         contests/contests.h
-        )
+        contests/contest2/taskH.cpp)
 
 set(SOURCE_FILES
         usables/my_stack.h

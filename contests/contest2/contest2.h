@@ -25,8 +25,8 @@ namespace contest2 {
             case 'D': return taskD();
             case 'E': return taskE();
             case 'F': return taskF();
-//            case 'G': return taskG();
-//            case 'H': return taskH();
+            case 'G': return taskG();
+            case 'H': return taskH();
 //            case 'I': return taskI();
 //            case 'J': return taskJ();
             default: return 1;
