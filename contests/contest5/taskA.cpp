@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "my_stack.h"
+#include "containers/stack.h"
 
 using std::cin;
 using std::cout;

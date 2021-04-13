@@ -3,7 +3,9 @@
 //
 
 #include <iostream>
-#include "my_array.h"
+#include "containers/array.h"
+
+using containers::array::Array;
 
 int test(){
     Array<int> a(5);

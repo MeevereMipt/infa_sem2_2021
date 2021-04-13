@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "my_queue.h"
+#include "containers/deque.h"
 
 namespace contest5{
 

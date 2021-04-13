@@ -3,16 +3,11 @@
 //
 
 #include <iostream>
-#include "my_array.h"
+#include "containers/array.h"
+
+using containers::array::Array;
 
 namespace contest6 {
-
-    void swap( int& a, int& b ){
-        int tmp;
-        tmp = a;
-        a = b;
-        b = tmp;
-    }
 
     void bubble_sort(Array<int>& arr){
         bool was_swapped = false;
@@ -21,13 +16,12 @@ namespace contest6 {
             was_swapped = false;
             for(int i=0; i<size-1; i++){
                 if( arr[i] > arr[i+1] ) {
-                    swap(arr[i], arr[i + 1]);
+                    std::swap(arr[i], arr[i + 1]);
                     was_swapped = true;
                 }
             }
         } while (was_swapped);
     }
-
 
     int taskD() {
 

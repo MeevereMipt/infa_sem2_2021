@@ -3,7 +3,9 @@
 //
 
 #include <iostream>
-#include "my_array.h"
+#include "containers/array.h"
+
+using containers::array::Array;
 
 namespace contest7{
 

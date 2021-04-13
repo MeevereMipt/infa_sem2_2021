@@ -2,12 +2,15 @@
 // Created by EGor on 16.03.2021.
 //
 #include <iostream>
-#include "my_array.h"
+#include "containers/cyclic_array.h"
+
+using containers::array::CyclicArray;
 
 namespace contest6{
 
-    Array<int>& smooth(const Array<int> &arr){
-        auto temp = new Array<int>(arr.get_size());
+    CyclicArray<int>& smooth(const CyclicArray<int> &arr){
+        CyclicArray<int> *temp;
+        temp = new CyclicArray<int>(arr.get_size());
 
         int size = arr.get_size();
         for( int i=0; i<size; i++ ){
@@ -22,7 +25,7 @@ namespace contest6{
 
         int n;
         std::cin >> n;
-        Array<int> test(n);
+        CyclicArray<int> test(n);
 
         std::cin >> test;
         test = smooth(test);
