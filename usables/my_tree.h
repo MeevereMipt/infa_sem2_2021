@@ -25,7 +25,7 @@ namespace bin_tree {
     public:
         BinTree();
         void insert(T data);
-        void search(T data);
+        bool search(T data);
     };
 
 }

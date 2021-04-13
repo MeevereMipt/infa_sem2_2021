@@ -21,11 +21,29 @@ BinTree<T>::BinTree() {
 }
 
 template<typename T>
-void BinTree<T>::search(T data) {
-
+bool BinTree<T>::search(T data) {
+    Node<T> *cur_node = head;
+    Node<T> *prev_node = nullptr;
+    while (cur_node != nullptr) {
+        prev_node = cur_node;
+        if (data < cur_node->data)
+            cur_node = cur_node->left;
+        else
+            cur_node = cur_node->right;
+    }
+    return prev_node->data == data;
 }
 
 template<typename T>
 void BinTree<T>::insert(T data) {
-
+    Node<T>* cur_node = head; Node<T>* prev_node = nullptr;
+    while( cur_node != nullptr ){
+        prev_node = cur_node;
+        if (data < cur_node->data)
+            cur_node = cur_node->left;
+        else
+            cur_node = cur_node->right;
+    }
+    cur_node = new Node(data);
+    data < cur_node->data ? prev_node->left = cur_node : prev_node->right = cur_node;
 }

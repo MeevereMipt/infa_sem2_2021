@@ -62,14 +62,12 @@ set(CONTEST_FILES
         contests/contest2/taskH.cpp)
 
 set(SOURCE_FILES
-        usables/my_stack.h
-        usables/my_queue.h
-        usables/my_array.h
-        usables/my_array.cpp
-        usables/my_queue.cpp
+        usables/containers/stack.h
+        usables/containers/deque.h
+        usables/containers/deque.cpp
         usables/my_tree.cpp
         usables/my_tree.h
-        usables/my_graph.h)
+        usables/my_graph.h usables/containers/stack.cpp usables/containers/array.cpp usables/containers/array.h usables/containers/cyclic_array.cpp usables/containers/cyclic_array.h)
 
 add_executable(
         mipt2021-2sem

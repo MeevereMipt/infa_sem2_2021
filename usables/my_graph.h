@@ -5,10 +5,11 @@
 #ifndef MIPT2021_2SEM_MY_GRAPH_H
 #define MIPT2021_2SEM_MY_GRAPH_H
 
-#include "my_array.h"
+#include "containers/array.h"
 #include <iostream>
 
 using std::pair;
+using containers::array::Array;
 
 namespace my_graph {
 
@@ -22,7 +23,13 @@ namespace my_graph {
 
     class Graph{
     public:
-        Array<Array<NodeAbstract*>> list;
+        // visual example:
+        // A: [(B,1), (C,1), D]
+        // B: [(A, C];
+        // C: [A, B];
+        //
+        Array<Array<pair<NodeAbstract*, int>>> list;
+
     };
 
 }
