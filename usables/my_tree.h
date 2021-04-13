@@ -12,6 +12,7 @@ namespace bin_tree {
         Node* left;
         Node* right;
         T data;
+        int height;
 
         explicit Node(T _data);
     };
@@ -26,8 +27,6 @@ namespace bin_tree {
         void insert(T data);
         void search(T data);
     };
-
-
 
 }
 

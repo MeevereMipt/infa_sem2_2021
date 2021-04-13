@@ -6,6 +6,10 @@ set(APP_USABLES usables/)
 
 include_directories(${APP_USABLES})
 
+set(PLAYGROUND_FILES
+        playground/playground.h
+        playground/test.cpp)
+
 set(CONTEST_FILES
         contests/contest2/contest2.h
             contests/contest2/taskA.cpp
@@ -62,7 +66,10 @@ set(SOURCE_FILES
         usables/my_queue.h
         usables/my_array.h
         usables/my_array.cpp
-        usables/my_queue.cpp usables/my_tree.cpp usables/my_tree.h)
+        usables/my_queue.cpp
+        usables/my_tree.cpp
+        usables/my_tree.h
+        usables/my_graph.h)
 
 add_executable(
         mipt2021-2sem
@@ -74,4 +81,6 @@ add_executable(
         lab2/task2/fibonnaci.hpp
 
         ${SOURCE_FILES}
+
+        ${PLAYGROUND_FILES}
 )
