@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "contests/contests.h"
+#include "playground/playground.h"
 #include <iostream>
 
 //typedef int my_int;
@@ -11,6 +12,10 @@
 
 int main() {
     int contest_num; char task_index;
+
+    #ifdef PLAYGROUND_ON
+    return playground::test();
+    #endif
 
     std::cout << "Enter contest number and the symbol of the task like: 2 A\n";
     while(true) {

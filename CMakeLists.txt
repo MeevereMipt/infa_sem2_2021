@@ -64,21 +64,23 @@ set(CONTEST_FILES
 set(SOURCE_FILES
         usables/containers/stack.h
         usables/containers/deque.h
-        usables/containers/deque.cpp
         usables/my_tree.cpp
         usables/my_tree.h
-        usables/my_graph.h usables/containers/stack.cpp usables/containers/array.cpp usables/containers/array.h usables/containers/cyclic_array.cpp usables/containers/cyclic_array.h)
+        usables/containers/array.h
+        usables/graph.h
+        usables/graph.cpp
+        usables/containers/cyclic_array.h
+        usables/containers/list.h)
 
 add_executable(
         mipt2021-2sem
 
+        ${SOURCE_FILES}
         ${CONTEST_FILES}
 
         main.cpp
         lab2/task1/factorial.hpp
         lab2/task2/fibonnaci.hpp
-
-        ${SOURCE_FILES}
 
         ${PLAYGROUND_FILES}
 )

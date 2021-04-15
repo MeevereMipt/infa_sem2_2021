@@ -5,6 +5,8 @@
 #include <iostream>
 #include "containers/stack.h"
 
+using containers::stack::Stack;
+
 namespace contest6{
 
     int taskA(){
@@ -12,7 +14,7 @@ namespace contest6{
         int n, m, input;
         std::cin >> n >> m;
 
-        Stack front, back;
+        Stack<int> front, back;
         for(int i=0; i<m; i++){
             std::cin >> input;
             front.push(input);

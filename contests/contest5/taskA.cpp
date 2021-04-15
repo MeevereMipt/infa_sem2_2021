@@ -8,10 +8,12 @@
 using std::cin;
 using std::cout;
 
+using containers::stack::Stack;
+
 namespace contest5 {
 
     int taskA() {
-        Stack a;
+        Stack<int> a;
         int input, top;
 
         while(true){

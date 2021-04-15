@@ -5,11 +5,13 @@
 #include <iostream>
 #include "containers/stack.h"
 
+using containers::stack::Stack;
+
 namespace contest5 {
 
     int taskB() {
 
-        Stack stack;
+        Stack<int> stack;
 
 //        std::istream::sync_with_stdio(false);
         std::cin.exceptions( std::ios_base::failbit );

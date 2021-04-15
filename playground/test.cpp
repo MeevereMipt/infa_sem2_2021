@@ -4,11 +4,13 @@
 
 #include <iostream>
 #include "containers/array.h"
+#include "playground.h"
 
 using containers::array::Array;
-
-int test(){
-    Array<int> a(5);
-    a.get_size();
-    return 0;
+namespace playground {
+    int test() {
+        Array<int> a(5);
+        std::cout << a.get_size();
+        return 0;
+    }
 }

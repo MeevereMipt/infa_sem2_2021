@@ -5,11 +5,13 @@
 #include <iostream>
 #include "containers/stack.h"
 
+using containers::stack::Stack;
+
 namespace contest6{
 
     int taskB(){
         int n, input;
-        Stack stack;
+        Stack<int> stack;
 
         std::cin >> n;
 

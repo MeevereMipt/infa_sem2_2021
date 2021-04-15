@@ -5,7 +5,7 @@
 #ifndef MIPT2021_2SEM_CYCLIC_ARRAY_H
 #define MIPT2021_2SEM_CYCLIC_ARRAY_H
 
-#import "array.h"
+#include "containers/array.h"
 
 namespace containers::array {
 

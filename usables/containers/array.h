@@ -17,14 +17,29 @@ namespace containers::array {
         int _size;
     public:
 
+        explicit Array(){
+            _size = 0;
+            _arr = nullptr;
+        }
+
         explicit Array(int size){
             _size = size;
             _arr = new T[size];
         }
 
+        explicit Array(int size, T def){
+            _size = size;
+            _arr = new T[size];
+            for( int i=0; i<size; i++){
+                _arr[i] = def;
+            }
+        }
+
         ~Array(){
             delete [] _arr;
         }
+
+        int find( T value ) const;
 
         virtual T& operator [] (int i) {
             if( i >= _size or i < 0 )
@@ -41,12 +56,20 @@ namespace containers::array {
 
         Array& operator=(const Array& other){
             if( &other != this ) {
-                int size = std::min<int,int>(other.get_size(),size);
+                int size = other.get_size() > size ? size : other.get_size();
                 for (int i = 0; i < size; i++) {
                     (*this)[i] = other[i];
                 }
             }
             return *this;
+        }
+
+        T* begin(){
+            return _arr;
+        }
+
+        T* end(){
+            return _arr + _size;
         }
 
         // wtf why clion said to make it [[nodiscard]]
@@ -56,10 +79,48 @@ namespace containers::array {
             return _size;
         }
 
-        friend ostream & operator << (ostream &out, const Array &arr);
-        friend istream & operator >> (istream &in, Array &arr);
     };
 
+    template<typename T>
+    ostream & operator << (ostream &out, const Array<T> &arr);
+    template<typename T>
+    istream & operator >> (istream &in, Array<T> &arr);
+
+    ////////////////////////////////////////////////////
+    /////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    //ya like this separation block???AAAAAAAAAAAAAAAAAA
+
+    template <typename T>
+    int Array<T>::find(T value) const {
+        int i=-1;
+        for( i=0; i < _size; i++ ){
+            if( (*this)[i] == value)
+                return i;
+        }
+        return i;
+    }
+
+    template <typename T>
+    ostream & operator << (ostream &out, const Array<T> &arr) {
+        out << "[ ";
+        for(int i=0; i<arr.get_size(); i++){
+            out << arr[i] << ' ';
+        }
+        out << ']';
+        return out;
+    }
+
+    template <typename T>
+    istream & operator >> (istream &in, Array<T> &arr) {
+        for(int i=0; i<arr.get_size(); i++){
+            in >> arr[i];
+        }
+        return in;
+    }
+
 }
+
+
 
 #endif //MIPT2021_2SEM_ARRAY_H
