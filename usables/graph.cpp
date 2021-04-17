@@ -36,7 +36,7 @@ Array<int>* Graph::_search_width(int index){
     auto parents = new Array<int>(matrix.get_size(), -1);
     check << index;
 
-    int cur_index, pre_index = -1;
+    int cur_index;
     while( check.length > 0 ){
         cur_index << check;
         if(!used[cur_index]){

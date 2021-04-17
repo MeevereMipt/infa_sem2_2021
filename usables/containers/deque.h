@@ -38,6 +38,12 @@ namespace containers::deque {
             length = 0;
         }
 
+        Deque(std::initializer_list<T> list): Deque(){
+            for( auto elem : list ){
+                *this << elem;
+            }
+        }
+
         void push_top(T data);
         void push_bottom(T data);
 

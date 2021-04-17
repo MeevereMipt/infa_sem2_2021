@@ -27,6 +27,16 @@ namespace containers::array {
             _arr = new T[size];
         }
 
+        Array(std::initializer_list<T> list){
+            _size = list.size();
+            _arr = new T[_size];
+            int i=0;
+            for( auto elem : list ){
+                _arr[i] = elem;
+                i++;
+            }
+        }
+
         explicit Array(int size, T def){
             _size = size;
             _arr = new T[size];

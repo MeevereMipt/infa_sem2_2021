@@ -7,10 +7,11 @@
 
 #include "containers/array.h"
 #include "containers/deque.h"
+#include "containers/list.h"
 #include <iostream>
 
-
 using std::pair;
+using containers::list::List;
 using containers::array::Array;
 using containers::deque::Deque;
 
@@ -20,8 +21,8 @@ namespace graph {
     public:
         // array of adjacent nodes and weights
         // like [(B,2),(C,3),(D,4)]
-        virtual Array<pair<NodeAbstract*, int>>* getNodes() = 0;
-        virtual bool operator== (const NodeAbstract& n) = 0;
+        virtual List<pair<NodeAbstract*, int>>* getNodes() = 0;
+//        virtual bool operator== (const NodeAbstract& n) = 0;
     };
 
     class Graph{
