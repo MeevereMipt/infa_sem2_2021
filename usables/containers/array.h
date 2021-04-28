@@ -47,12 +47,12 @@ namespace containers::array {
             }
         }
 
-
-
         ~Array(){
             if(_arr)
                 delete [] _arr;
         }
+
+        void resize( int new_size );
 
         int find( T value ) const;
 
@@ -123,6 +123,15 @@ namespace containers::array {
                 return i;
         }
         return i;
+    }
+
+    template <typename T>
+    void Array<T>::resize(int new_size) {
+        Array<T>new_array (new_size);
+        for(int i=0; i<new_size and i<this->_size; i++){
+            new_array[i] = (*this)[i];
+        }
+        *this = new_array;
     }
 
     template <typename T>
