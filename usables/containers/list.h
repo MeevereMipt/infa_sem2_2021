@@ -17,7 +17,14 @@ namespace containers::list {
     class List: public Deque<T>{
     public:
         List(): Deque<T>(){};
+
         List(std::initializer_list<T> list): Deque<T>(list){};
+
+        List(const List& list): List(){
+            for( auto iter = list.cbegin(); iter != list.cend(); ++iter ){
+                (*this) << *iter;
+            }
+        }
 
         struct Iterator {
         private:
@@ -38,12 +45,23 @@ namespace containers::list {
             Iterator& operator++() { ptr = ptr->next; return *this; }
 
             // Postfix increment
-            Iterator operator++(int) { Iterator temp = *this; ++(*this); return temp; }
+            const Iterator operator++(int) { Iterator temp = *this; ++(*this); return temp; }
 
             friend bool operator== (const Iterator& a, const Iterator& b) { return a.ptr == b.ptr; };
             friend bool operator!= (const Iterator& a, const Iterator& b) { return a.ptr != b.ptr; };
 
         };
+
+        List& operator= (const List& other){
+            if( &other == this )
+                return *this;
+            while(this->length){
+                this->pop_top();
+            }
+            for( auto iter = other.cbegin(); iter != other.cend(); ++iter){
+                this->push_top(*iter);
+            }
+        }
 
         bool find( T data ){
             DequeNode<T> cur_node = this->top;
@@ -55,9 +73,23 @@ namespace containers::list {
             return false;
         }
 
-        Iterator begin(){ return Iterator(this->bottom); }
-        Iterator end(){ return Iterator(this->top); }
+        T operator[] (int index) const{
+            if ( index < 0 or index >= this->length )
+                throw std::out_of_range("bad index");
+            int k = index;
+            for(auto elem: *this){
+                if( k == 0 )
+                    return elem;
+                k--;
+            }
+        }
 
+
+        Iterator begin(){ return Iterator(this->bottom); }
+        Iterator end(){ return Iterator(nullptr); }
+
+        Iterator cbegin() const{ return Iterator(this->bottom); }
+        Iterator cend() const{ return Iterator(nullptr); }
     };
 
     template<typename T>
@@ -68,8 +100,8 @@ namespace containers::list {
     template <typename T>
     ostream & operator << (ostream &out, List<T> &ls) {
         out << "| ";
-        for( auto it = ls.begin() ; it != ls.end() ; it++ ){
-            out << *it << ' ';
+        for( auto elem : ls ){
+            out << elem << ' ';
         }
         out << '|';
         return out;

@@ -31,7 +31,7 @@ namespace containers::deque {
         DequeNode<T> *top;
         DequeNode<T> *bottom;
     public:
-        int length;
+        int length = 0;
 
         Deque() {
             this->top = this->bottom = nullptr;
@@ -41,6 +41,12 @@ namespace containers::deque {
         Deque(std::initializer_list<T> list): Deque(){
             for( auto elem : list ){
                 *this << elem;
+            }
+        }
+
+        ~Deque(){
+            while(length != 0){
+                pop_bottom();
             }
         }
 
@@ -112,6 +118,8 @@ namespace containers::deque {
 
         T data = prev_top->data;
         this->top = prev_top->prev;
+        if(this->top)
+            this->top->next = nullptr;
 
         delete prev_top;
         length--;
@@ -125,7 +133,9 @@ namespace containers::deque {
             throw std::underflow_error("pop with empty Deque");
 
         T data = prev_bottom->data;
-        this->bottom = prev_bottom->prev;
+        this->bottom = prev_bottom->next;
+        if(this->bottom)
+            this->bottom->prev = nullptr;
 
         delete prev_bottom;
         length--;

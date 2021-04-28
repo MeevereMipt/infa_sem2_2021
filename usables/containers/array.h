@@ -14,7 +14,7 @@ namespace containers::array {
     template <typename T>
     class Array {
         T* _arr;
-        int _size;
+        int _size = 0;
     public:
 
         explicit Array(){
@@ -27,9 +27,7 @@ namespace containers::array {
             _arr = new T[size];
         }
 
-        Array(std::initializer_list<T> list){
-            _size = list.size();
-            _arr = new T[_size];
+        Array(std::initializer_list<T> list): Array(list.size()){
             int i=0;
             for( auto elem : list ){
                 _arr[i] = elem;
@@ -37,16 +35,23 @@ namespace containers::array {
             }
         }
 
-        explicit Array(int size, T def){
-            _size = size;
-            _arr = new T[size];
+        explicit Array(int size, T def): Array(size){
             for( int i=0; i<size; i++){
                 _arr[i] = def;
             }
         }
 
+        Array(const Array& other): Array(other.get_size()){
+            for( int i=0; i<other.get_size(); i++){
+                _arr[i] = other[i];
+            }
+        }
+
+
+
         ~Array(){
-            delete [] _arr;
+            if(_arr)
+                delete [] _arr;
         }
 
         int find( T value ) const;
@@ -64,13 +69,22 @@ namespace containers::array {
             return _arr[i];
         }
 
-        Array& operator=(const Array& other){
-            if( &other != this ) {
-                int size = other.get_size() > size ? size : other.get_size();
-                for (int i = 0; i < size; i++) {
-                    (*this)[i] = other[i];
-                }
+        //
+        Array& operator= (const Array& other){
+            if( &other == this )
+                return *this;
+
+            auto temp = new T[other._size];
+
+            for(int i=0; i<other._size; i++){
+                temp[i] = other[i];
             }
+            //if we assign we dont need this data
+            if(_arr)
+                delete [] _arr;
+            _arr = temp;
+            _size = other._size;
+
             return *this;
         }
 
