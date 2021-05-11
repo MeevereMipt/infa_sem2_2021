@@ -67,7 +67,7 @@ namespace playground {
 
     int test() {
 
-        int size = 3;
+        int size = 6;
 
         Array<Array<Square>> map(size,Array<Square>(size));
         for(int i=0; i<size; i++)
@@ -93,6 +93,21 @@ namespace playground {
         for( auto elem : path ){
             std::cout << *elem << ' ';
         }
+        std::cout << std::endl;
+
+        std::cout << "Longest path from (0,0): \n";
+        path = graph.longest_path_from( &map[0][0] );
+        for( auto elem : path ){
+            std::cout << *elem << ' ';
+        }
+        std::cout << std::endl;
+
+//        auto ham_path = graph.hamiltonian_path();
+//        std::cout << "Hamiltonian path: " << ham_path.length << std::endl;
+//        for( auto elem : ham_path ){
+//            std::cout << *elem << ' ';
+//        }
+//        std::cout << std::endl;
 
         return 0;
     }

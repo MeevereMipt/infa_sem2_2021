@@ -127,8 +127,10 @@ namespace containers::array {
 
     template <typename T>
     void Array<T>::resize(int new_size) {
+        if(new_size == _size)
+            return;
         Array<T>new_array (new_size);
-        for(int i=0; i<new_size and i<this->_size; i++){
+        for(int i=0; i<new_size and i<_size; i++){
             new_array[i] = (*this)[i];
         }
         *this = new_array;

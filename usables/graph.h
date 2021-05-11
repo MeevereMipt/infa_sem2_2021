@@ -53,16 +53,38 @@ namespace graph {
         List<NodeAbstract*> closest_path( NodeAbstract* start, NodeAbstract* end );
         List<NodeAbstract*> hamiltonian_path();
 
+        List<NodeAbstract*> longest_path_from( NodeAbstract* start );
+
         void print();
 
 //        Deque<NodeAbstract*>* shortest_path( NodeAbstract* start, NodeAbstract* end );
 
     protected:
 
-        // returns array of parents to each vertex (that correspond to the closest path to initial point)
+        //
+        /**
+         * returns array of parents to each vertex (that correspond to the closest path to initial point)
+         * @param index - index of the starting vertex
+         * @param parents - indexes of parents
+         * parents[4] = 5 - vertex with index 4 has 5 as a parent
+         */
         void _search_width( int index, Array<int>& parents);
 
-//        void _search_depth( int index, Array<int>& parents);
+        /**
+         * Depth search
+         * @param index - index of the starting vertex
+         * @param parents - indexes of parents
+         * parents[4] = 5 - vertex with index 4 has 5 as a parent
+         */
+        void _search_depth( int index, Array<int>& parents);
+
+        /**
+         * Search the longest path from starting point
+         * @param index - starting point
+         * @param used - used points (at the first iteration must be empty)
+         * @return - list that corresponds to path (first node - starting node)
+         */
+        List<int> _search_longest(int index, List<int> used);
 
         void _recover_path(Array<int>& arr, int index, List<NodeAbstract*>& deque);
 

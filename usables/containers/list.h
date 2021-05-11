@@ -64,11 +64,11 @@ namespace containers::list {
         }
 
         bool find( T data ){
-            DequeNode<T> cur_node = this->top;
+            DequeNode<T>* cur_node = this->top;
             while(cur_node){
-                if (cur_node.data == data)
+                if (cur_node->data == data)
                     return true;
-                cur_node = cur_node.prev;
+                cur_node = cur_node->prev;
             }
             return false;
         }
