@@ -11,7 +11,7 @@ namespace control2 {
 //    int task3();
 //    int task4();
 //    int task5();
-//    int task6();
+    int task6();
 
     int task(char index){
         switch(index) {
@@ -20,7 +20,7 @@ namespace control2 {
 //            case '3': return task3();
 //            case '4': return task4();
 //            case '5': return task5();
-//            case '6': return task6();
+            case '6': return task6();
             default: return 1;
         }
     }
