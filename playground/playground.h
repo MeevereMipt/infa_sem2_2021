@@ -5,7 +5,7 @@
 #ifndef MIPT2021_2SEM_PLAYGROUND_H
 #define MIPT2021_2SEM_PLAYGROUND_H
 
-#define PLAYGROUND_ON
+//#define PLAYGROUND_ON
 
 namespace playground {
     int test();

@@ -59,7 +59,7 @@ set(CONTEST_FILES
             contests/control_test/task9.cpp
 
         contests/contests.h
-        contests/contest2/taskH.cpp)
+        contests/contest2/taskH.cpp contests/control_test_2/contest_test_2.h contests/control_test_2/task1.cpp contests/control_test_2/task6.cpp)
 
 set(SOURCE_FILES
         usables/containers/stack.h

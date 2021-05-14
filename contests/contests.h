@@ -11,6 +11,7 @@
 #include "contest6_2020/contest6.h"
 #include "contest7/contest7.h"
 #include "control_test/control_test.h"
+#include "control_test_2/contest_test_2.h"
 
 #define WRONG_CONTEST_NUMBER 2
 
@@ -23,6 +24,7 @@ int contest_task( int num, char index ){
         case 6: return contest6::task(index);
         case 7: return contest7::task(index);
         case 10: return control::task(index);
+        case 11: return control2::task(index);
         default: return WRONG_CONTEST_NUMBER;
     }
 }
